@@ -100,6 +100,15 @@ export function RegistrationForm() {
   const profession = formData.profession as string
 
   return (
+    <>
+    <div className="max-w-4xl mx-auto flex justify-center mb-20">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Join  {" "}
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                Heavo Health
+              </span>
+        </h2>
+      </div>
     <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Name */}
@@ -319,5 +328,6 @@ export function RegistrationForm() {
         )}
       </div>
     </form>
+    </>
   )
 }
