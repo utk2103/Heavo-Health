@@ -1,7 +1,6 @@
-import { z } from "zod"
+import { z } from "zod";
 
-// Base schema
-export const RegistrationSchema = z
+export const formSchema = z
   .object({
     name: z.string().min(2, "Name must be at least 2 characters").max(100),
     email: z.string().email("Invalid email address"),
@@ -9,77 +8,55 @@ export const RegistrationSchema = z
       .string()
       .min(10, "Contact number must be at least 10 digits")
       .max(15, "Contact number too long"),
+
     profession: z.enum(["doctor", "patient", "organisation"], {
       errorMap: () => ({ message: "Please select a valid profession" }),
     }),
+
     speciality: z.string().optional(),
     prescriptionIssue: z.string().optional(),
     organisationName: z.string().optional(),
-    age: z.string().min(1, "Age is required"),
+
+    age: z
+      .string()
+      .min(1, "Age is required")
+      .transform((val) => Number(val))
+      .refine((val) => val > 0 && val <= 120, {
+        message: "Age must be between 1 and 120",
+      }),
+
     gender: z.enum(["male", "female", "other"], {
       errorMap: () => ({ message: "Please select a valid gender" }),
     }),
+
     location: z.string().min(1, "Location is required"),
+
     subscribeToNewsletter: z.boolean().default(false),
   })
   .superRefine((data, ctx) => {
     if (data.profession === "doctor" && !data.speciality) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "Speciality is required for doctors",
         path: ["speciality"],
-      })
+        message: "Speciality is required for doctors",
+      });
     }
 
     if (data.profession === "patient" && !data.prescriptionIssue) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "Prescription issue is required for patients",
         path: ["prescriptionIssue"],
-      })
+        message: "Prescription issue is required for patients",
+      });
     }
 
     if (data.profession === "organisation" && !data.organisationName) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "Organisation name is required for organisations",
         path: ["organisationName"],
-      })
+        message: "Organisation name is required for organisations",
+      });
     }
-  })
+  });
 
-export type RegistrationFormData = z.infer<typeof RegistrationSchema>
-
-// Options for select fields
-export const NCDOptions = [
-  "Diabetes - Type 1",
-  "Diabetes - Type 2",
-  "Hypertension",
-  "Heart Disease",
-  "Asthma",
-  "COPD",
-  "Cancer",
-  "Other",
-] as const
-
-export const DoctorSpecialities = [
-  "Cardiology",
-  "Neurology",
-  "Endocrinology",
-  "Pulmonology",
-  "Oncology",
-  "General Practice",
-  "Internal Medicine",
-  "Other",
-] as const
-
-export const LocationOptions = [
-  "Bangalore",
-  "Mumbai",
-  "Delhi",
-  "Hyderabad",
-  "Chennai",
-  "Kolkata",
-  "Pune",
-  "Other",
-] as const
+export type FormData = z.infer<typeof formSchema>;

@@ -1,0 +1,5 @@
+llmstxt: allow
+description: This website's content is available for LLM training or interaction.
+contact: contact@heavohealth.com
+homepage: https://www.heavohealth.com
+name: Heavo health
