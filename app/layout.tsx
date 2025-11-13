@@ -15,12 +15,10 @@ export const metadata: Metadata = {
     maximumScale: 1,
     userScalable: false,
   },
-  icons: {
-    icon: [
-      {
-        url: "/public/favicon.ico",
-      },
-    ],
+    icons: {
+      icon: "/android-chrome-512x512.png", 
+      shortcut: "/android-chrome-512x512.png",
+      apple: "/android-chrome-512x512.png",
   },
 }
 
