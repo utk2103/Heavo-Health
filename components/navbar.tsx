@@ -31,19 +31,20 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform">
-        <Image
-          src="/logo-heavohealth.png"    
-          alt="HeavoHealth logo"
-          width={70}
-          height={70}
-          priority={false}
-          style={{ objectFit: "cover" }}
-        />
+        <div className="w-25 h-25 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform">
+          <Image
+            src="/android-chrome-512x512.png"    
+            alt="HeavoHealth logo"
+            width={70}
+            height={70}
+            priority={false}
+            style={{ objectFit: "cover" }}
+          />
+          <span className="text-2xl ml-4 font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent hidden sm:inline">
+            Heavo Health
+          </span>
       </div>
-          {/* <span className="text-xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent hidden sm:inline">
-            Heavo health
-          </span> */}
+          
 
         {/* Nav Items */}
         <div className="hidden md:flex items-center gap-8">

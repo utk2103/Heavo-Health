@@ -8,22 +8,22 @@ export default function FeaturesSection() {
     {
       title: "Legacy digital therapeutic (DTx) solutions remain expensive",
       desc: "AI eliminates the need for human intervention, reducing costs by 80–90%",
-      img: "/images/different/icon1.png",
+      img: "/female-doctor-professional.jpg",
     },
     {
       title: "Consumers are ready for AI-driven healthcare",
       desc: "65%* of Indian consumers who use e-commerce accept digital health tools",
-      img: "/images/different/icon2.png",
+      img: "/male-product-professional.jpg",
     },
     {
       title: "Explosion of affordable sensors and wearables",
       desc: "Affordable smart devices enable seamless, AI-driven health tracking",
-      img: "/images/different/icon3.png",
+      img: "/mental-physical-health.jpg",
     },
     {
       title: "LLM breakthroughs and cheap edge AI",
       desc: "Accessible compute is making large-scale, AI-driven personalised care affordable.",
-      img: "/images/different/icon4.png",
+      img: "/male-tech-professional.jpg",
     },
   ]
 
@@ -88,14 +88,14 @@ export default function FeaturesSection() {
                 </div>
 
                 {/* Icon bubble */}
-                <div className="flex-shrink-0 md:w-1/2 flex justify-center">
-                  <div className="w-24 h-24 rounded-full bg-primary-foreground flex items-center justify-center shadow">
+                <div className="flex-shrink-0 md:w-1/2 flex justify-center bg-[]">
+                  <div className="w-72 h-72 rounded-full bg-primary-foreground flex items-center justify-center shadow">
                     <Image
                       src={item.img}
                       alt={item.title}
-                      width={55}
-                      height={55}
-                      className="object-contain"
+                      width={120}
+                      height={120}
+                      className="object-cover"
                     />
                   </div>
                 </div>

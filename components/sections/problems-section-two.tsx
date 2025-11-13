@@ -5,17 +5,17 @@ import { motion } from "framer-motion"
 
 const items = [
   {
-    img: "/images/problems/lifestyle.png",
+    img: "/ai-healthcare.png",
     title: "Lifestyle changes are easy to start, hard to sustain",
     desc: "Support between doctor visits is minimal, leading to poor outcomes",
   },
   {
-    img: "/images/problems/time.png",
+    img: "/diabetes-health.jpg",
     title: "Doctors have limited time per patient",
     desc: "Personalised care is nearly impossible when consults last just a few minutes",
   },
   {
-    img: "/images/problems/legacy.png",
+    img: "/heart-health-nutrition.jpg",
     title: "Legacy digital therapeutics are expensive",
     desc: "They rely on costly human support. Less than 1% of diabetics adopt such solutions.",
   },

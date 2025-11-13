@@ -8,6 +8,7 @@ import FeaturesSection from "@/components/sections/features-section"
 import ComingSoonSection from "@/components/sections/coming-soon-section"
 import TestimonialsSection from "@/components/sections/testimonials-section"
 import Footer from "@/components/footer"
+import { RegistrationForm } from "@/components/forms/registration-form"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <FeaturesSection />
       <ComingSoonSection />
       <TestimonialsSection />
+      <RegistrationForm />
       <Footer />
     </main>
   )
