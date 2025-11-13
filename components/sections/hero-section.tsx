@@ -136,18 +136,17 @@ export default function HeroSection() {
 
         <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold mb-8 text-balance leading-tight">
           <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Diabetes Care,
+            Simplifying Diabetes,
           </span>
           <br />
-          <span className="text-foreground">Simplified for You</span>
+          <span className="text-foreground">Care for Everyone</span>
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
           className="text-lg md:text-xl text-muted-foreground mb-14 max-w-2xl mx-auto text-balance leading-relaxed"
         >
-          Join HeavoHealth's subscription program combining diagnostics, expert consultations, personalized diet plans,
-          and a supportive community. Your complete diabetes reversal journey starts here.
+          Your daily companion for simpler, smarter, and more accesible diabetes care
         </motion.p>
 
         {/* CTA Buttons */}
