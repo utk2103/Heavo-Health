@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { Mail, Linkedin, Twitter, Github } from "lucide-react"
 
 export default function Footer() {
@@ -42,14 +43,16 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <motion.div variants={itemVariants}>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                MedFact
-              </span>
-            </Link>
+          <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform">
+        <Image
+          src="/logo-heavohealth.png"    
+          alt="HeavoHealth logo"
+          width={70}
+          height={70}
+          priority={false}
+          style={{ objectFit: "cover" }}
+        />
+      </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Transforming healthcare through AI. Empowering millions to take control of their health.
             </p>
