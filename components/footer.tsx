@@ -7,6 +7,8 @@ import { Mail, Linkedin, Twitter, Github } from "lucide-react"
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  // hii
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
