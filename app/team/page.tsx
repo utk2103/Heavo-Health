@@ -19,7 +19,7 @@ const teamMembers = [
     id: 2,
     name: "Utkarsh Upadhyay",
     role: "Co-Founder & CTO",
-    bio: "Former tech entrepreneur with passion for healthcare",
+    bio: "2+ Experience in Artificial Intelligence. A dedicated community leader who has built, mentored, and spoken to 10+ tech communities",
     image: "/teams/Utkarsh Upadhyay.jpg",
     socials: { linkedin: "#", twitter: "#" },
   },
@@ -35,7 +35,7 @@ const teamMembers = [
     id: 4,
     name: "Dr. Mridula Bhargava",
     role: "Advisor",
-    bio: "Full-stack engineer, leading healthcare technology innovation",
+    bio: "Global Advocate Public Health & Digital Health Strategist Founder & Director at Diabetes Fighters Trust",
     image: "/teams/Mridula.png",
     socials: { linkedin: "#", twitter: "#" },
   },
@@ -43,7 +43,7 @@ const teamMembers = [
     id: 5,
     name: "Mr. Arun Satija",
     role: "Technical Mentor",
-    bio: "20+ years in clinical trials and medical research",
+    bio: "Startup Success facilitator Founded Progneur(Acquired by Akkodis)",
     image: "/teams/Arun Satija.jpg",
     socials: { linkedin: "#", twitter: "#" },
   },
@@ -59,7 +59,7 @@ const teamMembers = [
     id: 7,
     name: "Dr. Indu Sharma",
     role: "Regulatory Advisor",
-    bio: "Design-focused product leader from top tech companies",
+    bio: "Ex-CSIR Scientist, University of Alberta logo Postdoctoral Research Fellow University of Alberta",
     image: "/teams/Indu Sharma.jpg",
     socials: { linkedin: "#", twitter: "#" },
   }
@@ -132,7 +132,7 @@ export default function TeamPage() {
                   <img
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-fill group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
 

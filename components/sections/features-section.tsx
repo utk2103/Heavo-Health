@@ -6,24 +6,24 @@ import { motion } from "framer-motion"
 export default function FeaturesSection() {
   const items = [
     {
-      title: "Legacy digital therapeutic (DTx) solutions remain expensive",
-      desc: "AI eliminates the need for human intervention, reducing costs by 80–90%",
-      img: "/female-doctor-professional.jpg",
+      title: "We walk with you every day",
+      desc: "Managing diabetes can feel overwhelming, but you’re not alone. Our care adapts to your needs, guiding you gently through every step.",
+      img: "/icons/walking.svg",
     },
     {
-      title: "Consumers are ready for AI-driven healthcare",
-      desc: "65%* of Indian consumers who use e-commerce accept digital health tools",
-      img: "/male-product-professional.jpg",
+      title: "Your journey, your rhythm",
+      desc: "Life doesn’t pause for diabetes, and neither should your care. Plans and insights adjust to your pace, making healthy choices simple and realistic.",
+      img: "/icons/rock.svg",
     },
     {
-      title: "Explosion of affordable sensors and wearables",
-      desc: "Affordable smart devices enable seamless, AI-driven health tracking",
-      img: "/mental-physical-health.jpg",
+      title: "Effortless, everyday monitoring",
+      desc: "Track your health seamlessly with smart tools that keep you informed without adding stress to your routine.",
+      img: "/icons/effortless.svg",
     },
     {
-      title: "LLM breakthroughs and cheap edge AI",
-      desc: "Accessible compute is making large-scale, AI-driven personalised care affordable.",
-      img: "/male-tech-professional.jpg",
+      title: "Support that truly cares",
+      desc: "Comprehensive, approachable guidance helps you feel confident, empowered, and in control-without the complexity or high costs.",
+      img: "/icons/support.svg",
     },
   ]
 
@@ -61,48 +61,52 @@ export default function FeaturesSection() {
         </p>
 
         {/* Alternating two-column content */}
-        <div className="space-y-10 md:space-y-16">
-          {items.map((item, index) => {
-            const isEven = index % 2 === 0
+        <div className="space-y-10 md:space-y-16 grid grid-cols-2 ">
+  {items.map((item, index) => {
+    const isEven = index % 2 === 0
 
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                // On mobile: column (text above icon). On md: alternate row vs row-reverse
-                className={`flex flex-col items-center gap-6 md:gap-12 md:items-center ${
-                  isEven ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              >
-                {/* Text block */}
-                <div className={`max-w-lg md:w-1/2 ${isEven ? "md:text-right" : "md:text-left"}`}>
-                  <h4 className="text-primary font-bold text-xl md:text-2xl leading-snug">
-                    {item.title}
-                  </h4>
-                  <p className="mt-3 text-gray-700 text-[15px] leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-
-                {/* Icon bubble */}
-                <div className="flex-shrink-0 md:w-1/2 flex justify-center bg-[]">
-                  <div className="w-72 h-72 rounded-full bg-primary-foreground flex items-center justify-center shadow">
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      width={120}
-                      height={120}
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            )
-          })}
+    return (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: index * 0.05 }}
+        className={`flex flex-col items-center gap-6 md:gap-12 md:items-center ${
+          isEven ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
+      >
+        {/* Text block */}
+        <div className={`max-w-lg md:w-1/2 ${isEven ? "md:text-right" : "md:text-left"}`}>
+          <h4 className="text-primary font-bold text-xl md:text-2xl leading-snug">
+            {item.title}
+          </h4>
+          <p className="mt-3 text-gray-700 text-[15px] leading-relaxed">
+            {item.desc}
+          </p>
         </div>
+
+        {/* Icon bubble - explicit sizes so image shows correctly */}
+        <div className="flex-shrink-0 md:w-1/2 flex justify-center items-center">
+          <div
+            className="w-20 h-20 md:w-32 md:h-32 rounded-full bg-[#f3f4f6] flex items-center justify-center shadow-lg"
+            // optional: add border to match design
+          >
+            <Image
+              src={item.img.startsWith("/") ? item.img : `/${item.img}`} // ensure leading slash
+              alt={item.title}
+              width={96} // controls intrinsic size for Next/Image
+              height={96}
+              className="object-contain w-12 h-12 md:w-20 md:h-20"
+              priority={false}
+            />
+          </div>
+        </div>
+      </motion.div>
+    )
+  })}
+</div>
+
       </div>
     </section>
   )

@@ -10,7 +10,7 @@ const testimonials = [
     name: "Dr. Anuj Pathak",
     role: "Diabetes Patient",
     quote:
-      "MedFact completely changed my life. The AI assistant helped me understand my condition better than any doctor visit.",
+      "Heavo health completely changed my life. The AI assistant helped me understand my condition better than any doctor visit.",
     rating: 5,
     image: "/teams/Anuj Pathak.jpg",
   },
@@ -25,7 +25,7 @@ const testimonials = [
   {
     name: "Mr. Arun Satija",
     role: "Diabetes Reversal Program",
-    quote: "After 3 months with MedFact, I reduced my insulin dependency by 40%. This is life-changing!",
+    quote: "After 3 months with Heavo health, I reduced my insulin dependency by 40%. This is life-changing!",
     rating: 5,
     image: "/teams/Arun Satija.jpg",
   },
