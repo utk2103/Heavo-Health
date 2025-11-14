@@ -47,7 +47,7 @@ export default function Footer() {
           <motion.div variants={itemVariants}>
           <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform">
         <Image
-          src="/logo-heavohealth.png"    
+          src="/android-chrome-512x512.png"    
           alt="HeavoHealth logo"
           width={70}
           height={70}

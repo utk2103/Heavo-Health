@@ -3,38 +3,39 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import Image from "next/image"
 
 const testimonials = [
   {
-    name: "Sarah Anderson",
+    name: "Dr. Anuj Pathak",
     role: "Diabetes Patient",
     quote:
       "MedFact completely changed my life. The AI assistant helped me understand my condition better than any doctor visit.",
     rating: 5,
-    image: "👩‍⚕️",
+    image: "/teams/Anuj Pathak.jpg",
   },
   {
-    name: "James Mitchell",
+    name: "Dr. Mridula Bhargava",
     role: "Health Enthusiast",
     quote:
       "The progress tracking features are incredible. I can finally see concrete improvements in my health metrics.",
     rating: 5,
-    image: "👨‍💼",
+    image: "/teams/Mridula.png",
   },
   {
-    name: "Emily Rodriguez",
+    name: "Mr. Arun Satija",
     role: "Diabetes Reversal Program",
     quote: "After 3 months with MedFact, I reduced my insulin dependency by 40%. This is life-changing!",
     rating: 5,
-    image: "👩‍🦰",
+    image: "/teams/Arun Satija.jpg",
   },
   {
-    name: "Michael Chen",
+    name: "Mr. Abhishek Pathak",
     role: "Tech Professional",
     quote:
       "Finally, healthcare meets modern technology. The AI insights are spot-on and the community support is amazing.",
     rating: 5,
-    image: "👨‍💻",
+    image: "/teams/Abhishek Pathak.jpg",
   },
 ]
 
@@ -115,7 +116,14 @@ export default function TestimonialsSection() {
               <div className="flex flex-col items-center text-center">
                 {/* Avatar */}
                 <div className="text-7xl mb-8 transform hover:scale-110 transition-transform duration-300">
-                  {testimonials[current].image}
+                  <div className="w-72 h-72 rounded-full bg-primary-foreground flex items-center justify-center shadow">
+                      <Image
+                        src={testimonials[current].image}
+                        width={120}
+                        height={120}
+                        alt="Testimonial image"
+                        className="object-cover"
+/>                  </div>
                 </div>
 
                 {/* Rating */}

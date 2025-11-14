@@ -100,7 +100,7 @@ export function RegistrationForm() {
   const profession = formData.profession as string
 
   return (
-    <>
+    <div className="p-12">
     <div className="max-w-4xl mx-auto flex justify-center mb-20">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Join  {" "}
@@ -328,6 +328,6 @@ export function RegistrationForm() {
         )}
       </div>
     </form>
-    </>
+    </div>
   )
 }
