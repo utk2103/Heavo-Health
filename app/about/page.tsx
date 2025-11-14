@@ -25,11 +25,11 @@ const values = [
 ]
 
 const milestones = [
-  { year: "2020", event: "Founded MedFact with vision to democratize healthcare" },
-  { year: "2021", event: "Launched AI Health Assistant to 10,000+ users" },
-  { year: "2022", event: "Diabetes Reversal Program shows 85% success rate" },
-  { year: "2023", event: "Expanded to 50+ countries, 500,000+ active users" },
-  { year: "2024", event: "Partnerships with leading health institutions worldwide" },
+  { year: "Dec 2024", event: "Founded Heavo health with vision to democratize healthcare" },
+  { year: "Jan 2025", event: "Started experimenting on CGMs Devices developed proof of concept" },
+  { year: "May 2025", event: "Validating our idea with health experts and partnership with leading health organization and experts" },
+  { year: "July 2025", event: "Actively contributing to Diabetes Communities" },
+  { year: "Sept 2025", event: "Created Program for diabetes by understanding the market needs" },
 ]
 
 const containerVariants = {
@@ -69,7 +69,7 @@ export default function AboutPage() {
         >
           <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              About MedFact
+              About Heavo health
             </span>
           </motion.h1>
 
@@ -89,21 +89,20 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+            <h2 className="text-3xl font-bold mb-6">💜 Our Story</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                MedFact was founded on a simple belief: everyone deserves access to world-class healthcare guidance,
-                regardless of their location or socioeconomic status. Our founders, a team of physicians and AI experts,
-                witnessed firsthand the challenges patients face in managing chronic diseases.
+              Heavohealth was founded on a clear and urgent vision: To empower every diabetic and pre-diabetic to reclaim their health through innovation and truly personalized care.
               </p>
               <p>
-                Frustrated by the limitations of traditional healthcare systems, they set out to build something better.
-                The result is MedFact—an AI-powered platform that combines medical expertise with cutting-edge
-                technology to provide personalized health solutions.
+              India faces a staggering diabetes crisis. One in six Indians lives with diabetes , accounting for over 100 million diabetics and an additional 100 million pre-diabetics. The problem isn't just the sheer number; it's the broken system:
               </p>
               <p>
-                Today, MedFact is helping hundreds of thousands of people take control of their health, reverse chronic
-                diseases, and live better lives.
+              • Lack of Support: An overwhelming 99% of patients manage their diabetes with no structured support.<br/><br/>
+
+              • Poor Understanding: Over two-thirds of patients have a poor understanding of their condition.<br/><br/>
+
+              • Fragmentation: Patients are forced to juggle multiple apps, devices, clinics, and diets, with no unified guidance. Diabetes care is currently reactive, fragmented, and impersonal.<br/><br/>
               </p>
             </div>
           </motion.div>
@@ -161,7 +160,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-4">Our Journey</h2>
-            <p className="text-muted-foreground">Key milestones in MedFact's growth</p>
+            <p className="text-muted-foreground">Key milestones in Heavo health's growth</p>
           </motion.div>
 
           <motion.div

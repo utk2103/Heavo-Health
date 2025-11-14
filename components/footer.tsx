@@ -134,7 +134,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm text-muted-foreground">© {currentYear} MedFact. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">© {currentYear} Heavo health. All rights reserved.</p>
 
           {/* Social Links */}
           <div className="flex items-center gap-4 mt-6 md:mt-0">
